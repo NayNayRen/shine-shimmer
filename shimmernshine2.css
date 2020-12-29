@@ -1,0 +1,558 @@
+*{
+  box-sizing: border-box;
+}
+
+#about {
+  top: 380px;
+  background-color: #993399;
+}
+
+body {
+  background-attachment: fixed;
+  background-image: url('images/poolPalmTrees.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+}
+
+.button{
+  background: rgba(0,0,0,0.85);
+  border: solid 1px #fff;
+  border-radius: 5px;
+  color: rgba(0,153,255,1);
+  margin: 10px 10px 0 0;
+  padding: 5px 10px;
+  transition: all 500ms ease;
+}
+.button:hover{
+  background: rgba(255,255,255,0.75);
+  cursor: pointer;
+}
+
+caption {
+  font-size: 2.25em;
+  text-shadow: 2px 2px 5px #000000;
+  margin-top: .25em;
+  margin-bottom: .5em;
+}
+
+.comment-box{
+  background-color: #fff;
+  border: solid 2px #FF8C00;
+  color: #000;
+  height: 175px;
+  overflow-y: scroll;
+  padding: 5px;
+  width: 100%;
+}
+
+#contact {
+  top: 320px;
+  background-color: #FF8C00;
+}
+
+.estimatesBanner {
+  background-image: url('images/water.jpg');
+  background-position: center;
+  background-size: cover;
+  border: solid 1px #fff;
+  margin-right: 100px;
+  padding: 5px;
+  width: 200px;
+  float: right;
+}
+
+.estimatesBanner h1 {
+  text-align: center;
+  color: rgba(255,102,204,1);
+  font-size: 20px;
+  text-shadow: -1px 1px 1px #000,
+  1px 1px 2px #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000;
+  transition: color 500ms ease;
+}
+
+.estimatesBanner h1:hover {
+  color: #fff;
+  text-decoration: none;
+  transition: color 500ms ease;
+}
+
+.estimatesBanner h3 {
+  text-align: center;
+  color: rgba(255,102,204,1);
+  text-shadow: -1px 1px 1px #000,
+  1px 1px 2px #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000;
+  font-size: 20px;
+  transition: color 500ms ease;
+}
+
+.estimatesBanner h3:hover {
+  color: #fff;
+  text-decoration: none;
+  transition: color 500ms ease;
+}
+
+fieldset {
+  background-color: rgba(0,0,0,0.85);
+  left: 50%;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);/* x axis then y axis*/
+}
+
+footer {
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(51,0,0,0.85));
+  border-top: solid 1px #fff;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 5px #000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 15px;
+}
+
+footer p a {
+  color: #FF8C00;
+  text-shadow: 2px 2px 5px #000000;
+}
+
+footer p a:hover {
+  color: #FFFFFF;
+  transition: color 500ms ease;
+}
+
+form {
+  border: solid 1px #fff;
+  background-color: rgba(0,0,0,0.85);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.floatRight {
+  bottom: 5px;
+  position: absolute;
+  right: 15px;
+}
+.floatRight img{
+  width: 80px;
+}
+
+#gallery {
+  top: 200px;
+  background-color: #f44336;
+}
+
+.gallery_container {
+  align-items: center;
+  background-color: rgba(0,0,0,0.85);
+  border: solid 1px #fff;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  width: 80%;
+}
+
+.gallery_container img {
+  border: solid 1px #fff;
+  width: 70%;
+}
+
+header {
+  border-bottom: solid 1px #fff;
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(51,0,0,0.85));
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  color: #FFFFFF;
+  font-size: 40px;
+}
+
+header h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: -1px 1px 1px #000,
+  1px 1px 2px #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000;
+  margin: 0;
+}
+
+header h5 {
+  font-size: 30px;
+  font-style: italic;
+  color: #FF8C00;
+  text-shadow: -1px 1px 1px #000,
+  1px 1px 2px #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000;
+}
+
+#home {
+  top: 80px;
+  background-color: #4CAF50;
+}
+
+.input{
+  background-color: #fff;
+  border: solid 2px #FF8C00;
+  color: #000;
+  margin: 0 10px 10px 0;
+  padding: 5px;
+  width: 90%;
+}
+
+#italic {
+  font-style: italic;
+  color: #FF8C00
+}
+
+main {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+main p {
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+}
+
+main a {
+  text-decoration: none;
+}
+
+.mySideNav a {
+  margin-top: 225px;
+  position: absolute;
+  left: -100px;
+  transition: 0.3s;
+  padding: 10px 5px;
+  width: 130px;
+  text-decoration: none;
+  font-size: 30px;
+  border: 1px solid #fff;
+  border-radius: 0 5px 5px 0;
+  z-index: 10;
+}
+
+.mySideNav a:hover {
+  background-image: url('images/ball.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  left: 0;
+  text-shadow: -1px 1px 1px #000,
+  1px 1px 2px #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000;
+}
+
+.missGio {
+  background-image: url('images/missGio.jpg');
+  width: 20%;
+  border: solid 1px #fff;
+  border-radius: 50%;
+  margin: 0 20px 0 10px;
+  float: right;
+}
+
+ol {
+  color: #FFFFFF;
+  font-size: 22px;
+  padding: 0 50px;
+}
+
+.orange {
+  bottom: 0;
+  color: #FF8C00;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.poolLogo {
+  width: 300px;
+  border: solid 1px #FFFFFF;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.poolTipLinks{
+  color: rgba(0,153,255,1);
+}
+
+.poolTreatment {
+  border: solid 1px #FFFFFF;
+  margin: auto;
+  max-width: 90%;
+}
+
+.pressureWashed {
+  border: solid 1px #FFFFFF;
+  margin: auto;
+  max-width: 90%;
+}
+
+#red {
+  color: #FF0000;
+}
+
+#services {
+  top: 140px;
+  background-color: rgba(0,153,255,1);
+}
+
+.services {
+  border: solid 1px #fff;
+  background: rgba(0,0,0,0.85);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  width: 80%;
+}
+.services h3{
+  color: #FF8C00;
+  font-size: 25px;
+  margin: 0;
+}
+.services span{
+  color: #fff;
+  font-size: 20px;
+}
+
+.screenRepair {
+  border: solid 1px #fff;
+  max-width: 90%;
+}
+
+#signature {
+  font-style: italic;
+  font-size: 1.5em;
+  color: #FF8C00;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.text{
+  background-color: rgba(0,0,0,0.85);
+  border: solid 1px #fff;
+  color: rgba(0,153,255,1);
+  margin: 20px auto;
+  padding: 15px 0;
+  width: 80%;
+}
+
+textarea {
+  border: solid 2px #FF8C00;
+  background-color: #fff;
+  color: #000;
+  height: 60px;
+  padding: 5px;
+  width: 90%;
+}
+
+.textSize {
+  font-size: 1.25em;
+}
+
+#tips {
+  background-color: #555;
+  top: 260px;
+}
+
+table {
+  border-collapse: collapse;
+  color: #fff;
+  margin: auto;
+  text-align: center;
+  width: 60%;
+}
+
+td{
+  padding: 5px 0;
+}
+
+tr {
+  border: solid 1px #fff;
+}
+
+tr:nth-of-type(even) {
+  background-color: #000;
+  font-size: 20px;
+}
+
+tr:nth-of-type(odd) {
+  background-color: #FF8C00;
+  color: #000;
+  font-size: 23px;
+}
+
+ul {
+  font-size: 20px;
+  color: #FF8C00;
+}
+
+.waterTreatment, .pressureWash, .repairs {
+  margin: auto;
+  width: 90%;
+}
+
+@media (max-width: 1200px){
+
+  .comment-box{
+    margin: 10px 0 0 0;
+  }
+
+  .estimatesBanner{
+    margin: 0 25px 10px 10px;
+    width: 115px;
+  }
+
+  .estimatesBanner h1, .estimatesBanner h3{
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .floatRight img{
+    width: 50px;
+  }
+
+  form{
+    grid-template-columns: auto;
+    width: 400px;
+  }
+
+  .gallery_container{
+    grid-template-columns: auto auto;
+  }
+
+  header {
+    border-bottom: solid 1px #FFFFFF;
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(51,0,0,0.85));
+    padding: 10px;
+    text-align: center;
+    position: relative;
+  }
+
+  header h1 {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  header h2{
+    font-size: 30px;
+    margin: 0;
+  }
+
+  header h5 {
+    font-size: 25px;
+    margin: 0;
+  }
+
+  main p{
+    font-size: 18px;
+  }
+
+  .mySideNav a{
+    font-size: 20px;
+    margin-top: 125px;
+    padding: 5px 5px;
+    width: 125px;
+  }
+  .mySideNav a:hover {
+    width: 75px;
+  }
+
+  ol{
+    font-size: 18px;
+  }
+
+  .poolLogo{
+    width: 125px;
+  }
+
+  .services h3{
+    font-size: 22px;
+  }
+  .services span{
+    font-size: 18px;
+  }
+
+  .text{
+    padding: 5px 0;
+  }
+
+  tr:nth-of-type(even){
+    font-size: 16px;
+  }
+  tr:nth-of-type(odd){
+    font-size: 20px;
+  }
+
+  ul {
+    font-size: 18px;
+    color: #FF8C00;
+  }
+}
+
+@media (max-width: 800px){
+
+  fieldset{
+    width: 85%;
+  }
+
+  .gallery_container{
+    grid-template-columns: auto;
+  }
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  header h2{
+    font-size: 20px;
+  }
+
+  header h5 {
+    font-size: 18px;
+  }
+
+  .mySideNav a{
+    margin-top: 75px;
+  }
+
+  .poolLogo{
+    display: none;
+  }
+
+  .services{
+    grid-template-columns: 1fr;
+  }
+
+}
