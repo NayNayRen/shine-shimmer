@@ -15,7 +15,8 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
 }
 
 .button{
@@ -59,10 +60,9 @@ caption {
   background-position: center;
   background-size: cover;
   border: solid 1px #fff;
-  margin-right: 100px;
+  margin: 10px auto;
   padding: 5px;
-  width: 200px;
-  float: right;
+  width: 300px;
 }
 
 .estimatesBanner h1 {
@@ -101,11 +101,8 @@ caption {
 
 fieldset {
   background-color: rgba(0,0,0,0.85);
-  left: 50%;
+  margin: 10px auto;
   width: 80%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);/* x axis then y axis*/
 }
 
 footer {
@@ -228,19 +225,21 @@ header h5 {
   color: #FF8C00
 }
 
-main {
-  height: 100%;
+.main {
+  padding-bottom: 30px;
+  margin: 30px auto;
+  min-height: 100%;
   position: relative;
   width: 100%;
 }
 
-main p {
+.main p {
   font-size: 22px;
   color: #fff;
   text-align: center;
 }
 
-main a {
+.main a {
   text-decoration: none;
 }
 
@@ -359,12 +358,24 @@ ol {
   text-shadow: 2px 2px 5px #000;
 }
 
+table {
+  border-collapse: collapse;
+  color: #fff;
+  margin: auto;
+  text-align: center;
+  width: 80%;
+}
+
+td{
+  padding: 5px 0;
+}
+
 .text{
   background-color: rgba(0,0,0,0.85);
   border: solid 1px #fff;
   color: rgba(0,153,255,1);
   margin: 20px auto;
-  padding: 15px 0;
+  padding: 15px 20px;
   width: 80%;
 }
 
@@ -384,18 +395,6 @@ textarea {
 #tips {
   background-color: #555;
   top: 260px;
-}
-
-table {
-  border-collapse: collapse;
-  color: #fff;
-  margin: auto;
-  text-align: center;
-  width: 60%;
-}
-
-td{
-  padding: 5px 0;
 }
 
 tr {
@@ -423,15 +422,10 @@ ul {
   width: 90%;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1000px){
 
   .comment-box{
     margin: 10px 0 0 0;
-  }
-
-  .estimatesBanner{
-    margin: 0 25px 10px 10px;
-    width: 115px;
   }
 
   .estimatesBanner h1, .estimatesBanner h3{
@@ -445,7 +439,7 @@ ul {
 
   form{
     grid-template-columns: auto;
-    width: 400px;
+    max-width: 70%;
   }
 
   .gallery_container{
@@ -475,8 +469,8 @@ ul {
     margin: 0;
   }
 
-  main p{
-    font-size: 18px;
+  .main p{
+    font-size: 20px;
   }
 
   .mySideNav a{
@@ -497,15 +491,15 @@ ul {
     width: 125px;
   }
 
+  .services{
+    width: 90%;
+  }
+
   .services h3{
     font-size: 22px;
   }
   .services span{
     font-size: 18px;
-  }
-
-  .text{
-    padding: 5px 0;
   }
 
   tr:nth-of-type(even){
@@ -527,8 +521,13 @@ ul {
     width: 85%;
   }
 
+  form{
+    max-width: 85%;
+  }
+
   .gallery_container{
     grid-template-columns: auto;
+    width: 90%;
   }
 
   header h1 {
@@ -555,4 +554,61 @@ ul {
     grid-template-columns: 1fr;
   }
 
+  table{
+    width: 90%;
+  }
+
+  .text{
+    border-left: none;
+    border-right: none;
+    font-size: 16px;
+    padding: 15px 20px 15px 30px;
+    width: 100%;
+  }
+}
+
+@media(max-width: 500px){
+
+  fieldset{
+    border-left: none;
+    border-right: none;
+    font-size: 10px;
+    padding: 20px 30px;
+    width: 100%;
+  }
+
+  footer{
+    text-align: left;
+  }
+
+  form{
+    border-left: none;
+    border-right: none;
+    max-width: 100%;
+  }
+
+  .gallery_container{
+    border-left: none;
+    border-right: none;
+    width: 100%;
+  }
+
+  .main p{
+    font-size: 18px;
+  }
+
+  .services{
+    border-left: none;
+    border-right: none;
+    width: 100%;
+  }
+
+  table{
+    width: 100%;
+  }
+
+  tr {
+    border-left: none;
+    border-right: none;
+  }
 }
