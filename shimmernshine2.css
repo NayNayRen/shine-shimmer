@@ -11,7 +11,7 @@
 
 body {
   background-attachment: fixed;
-  background-image: url('images/poolPalmTrees.jpg');
+  background-image: url('images/background.jpg');
   background-position: center;
   background-size: cover;
   display: flex;
@@ -61,24 +61,21 @@ caption {
 }
 
 #contact {
-  top: 320px;
   background-color: #FF8C00;
 }
 
 .estimatesBanner {
-  background-image: url('images/water.jpg');
-  background-position: center;
-  background-size: cover;
-  box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 50px 20px #000;
   margin: 10px auto;
   padding: 5px;
-  width: 300px;
+  position: relative;
+  width: 500px;
 }
 
 .estimatesBanner h1 {
   text-align: center;
   color: rgba(255, 102, 204, 1);
-  font-size: 20px;
+  font-size: 25px;
   text-shadow: -1px 1px 1px #000,
     1px 1px 2px #000,
     1px -1px 0 #000,
@@ -139,24 +136,30 @@ form {
 }
 
 #gallery {
-  top: 200px;
   background-color: #f44336;
 }
 
-.gallery_container {
+.gallery-container {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.85);
-  display: grid;
-  grid-template-columns: auto auto auto;
-  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto 10px auto;
   padding: 20px;
   position: relative;
   text-align: center;
-  width: 80%;
+  width: 70%;
 }
 
-.gallery_container img {
-  width: 70%;
+.gallery-container div {
+  margin: 5px;
+  width: 375px;
+}
+
+.gallery-container img {
+  width: 100%;
 }
 
 header {
@@ -216,6 +219,12 @@ header h5 {
   color: #FF8C00
 }
 
+li{
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
 .main {
   height: 100%;
   position: relative;
@@ -224,6 +233,7 @@ header h5 {
 .main p {
   font-size: 22px;
   color: #fff;
+  margin-bottom: 0;
   text-align: center;
 }
 
@@ -262,10 +272,15 @@ header h5 {
   width: 250px;
 }
 
-ol {
-  color: #fff;
-  font-size: 22px;
-  padding: 0 50px;
+ol{
+  counter-reset: li; /* Initiate a counter */
+  list-style-type: none;
+}
+
+ol li::before{
+  color: red;
+  content: counter(li)'. '; /* Use the counter as content */
+  counter-increment: li; /* Increment the counter by 1 */
 }
 
 .orange {
@@ -285,7 +300,6 @@ ol {
 }
 
 #services {
-  top: 140px;
   background-color: rgba(0, 153, 255, 1);
 }
 
@@ -296,22 +310,31 @@ ol {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px auto;
+  margin: 0 auto 20px auto;
   padding: 20px;
   width: 70%;
 }
 
 .services div{
-  border: solid 1px blue;
-  width: 200px;
+  background-color: #fff;
+  width: 300px;
+}
+
+.services img{
+  width: 100%;
 }
 
 .services h3 {
   color: #FF8C00;
+  padding-left: 5px;
+  text-shadow: 0 1px 1px #000;
 }
 
-.services span {
-  color: #fff;
+.services p {
+  color: #000;
+  font-size: 16px;
+  margin: 0;
+  padding: 10px 5px;
 }
 
 #signature {
@@ -355,7 +378,6 @@ textarea {
 
 #tips {
   background-color: #555;
-  top: 260px;
 }
 
 tr:nth-of-type(even) {
@@ -413,6 +435,10 @@ ul {
   .nav a:hover {
     width: 235px;
   }
+
+  .services div:nth-child(2){
+    order: 3;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -433,8 +459,12 @@ ul {
     max-width: 70%;
   }
 
-  .gallery_container {
-    grid-template-columns: auto auto;
+  .gallery-container {
+    width: 85%;
+  }
+
+  .gallery-container div{
+    width: 325px;
   }
 
   header h1 {
@@ -453,6 +483,8 @@ ul {
 
   .main p {
     font-size: 18px;
+    width: 85%;
+
   }
 
   .nav {
@@ -467,7 +499,7 @@ ul {
     width: 225px;
   }
 
-  ol {
+  li {
     font-size: 18px;
   }
 
@@ -476,7 +508,7 @@ ul {
   }
 
   .services {
-    width: 90%;
+    width: 85%;
   }
 
   .services h3 {
@@ -502,6 +534,11 @@ ul {
 }
 
 @media (max-width: 700px) {
+
+  .estimatesBanner{
+    width: 100%;
+  }
+
   fieldset {
     margin: 20px 0 20px 0;
     width: 100%;
@@ -511,9 +548,8 @@ ul {
     max-width: 90%;
   }
 
-  .gallery_container {
-    grid-template-columns: auto;
-    width: 90%;
+  .gallery-container {
+    width: 95%;
   }
 
   header {
@@ -534,6 +570,10 @@ ul {
 
   .header-photo {
     display: none;
+  }
+
+  .main p{
+    width: 95%;
   }
 
   .nav {
@@ -564,11 +604,11 @@ ul {
   }
 
   .services {
-    grid-template-columns: 1fr;
+    width: 95%;
   }
 
   table {
-    width: 90%;
+    width: 95%;
   }
 }
 
@@ -582,9 +622,13 @@ ul {
     border-right: none;
   }
 
-  .gallery_container {
-    border-left: none;
-    border-right: none;
+  .gallery-container {
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  .gallery-container div{
+    margin: 5px 0;
     width: 100%;
   }
 
@@ -600,13 +644,22 @@ ul {
     font-size: 16px;
   }
 
-  .main p {
+  li{
     font-size: 16px;
   }
 
+  .main p {
+    font-size: 16px;
+    width: 100%;
+
+  }
+
   .services {
-    border-left: none;
-    border-right: none;
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  .services div{
     width: 100%;
   }
 
