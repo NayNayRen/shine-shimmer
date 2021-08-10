@@ -24,7 +24,7 @@ body {
 }
 
 html {
-  height: 100vh;
+  height: 100%;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -51,28 +51,36 @@ caption {
   margin-bottom: .5em;
 }
 
-.comment-box {
+/* .comment-box {
   background-color: #fff;
   color: #000;
   height: 175px;
   overflow-y: scroll;
   padding: 5px;
   width: 100%;
-}
+} */
 
 #contact {
   background-color: #FF8C00;
 }
 
-.estimatesBanner {
-  box-shadow: 0 0 50px 20px #000;
+.container {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 50px auto;
+  padding: 15px 20px;
+  width: 70%;
+}
+
+.estimates-banner {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-top: solid 1px #fff;
   margin: 10px auto;
   padding: 5px;
   position: relative;
   width: 500px;
 }
 
-.estimatesBanner h1 {
+.estimates-banner h1 {
   text-align: center;
   color: rgba(255, 102, 204, 1);
   font-size: 25px;
@@ -83,12 +91,12 @@ caption {
   transition: color 150ms ease;
 }
 
-.estimatesBanner h1:hover, .estimatesBanner h3:hover {
+.estimates-banner h1:hover, .estimates-banner h3:hover {
   color: #fff;
   cursor: pointer;
 }
 
-.estimatesBanner h3 {
+.estimates-banner h3 {
   text-align: center;
   color: rgba(255, 102, 204, 1);
   text-shadow: -1px 1px 1px #000,
@@ -97,14 +105,6 @@ caption {
     -1px -1px 0 #000;
   font-size: 20px;
   transition: color 150ms ease;
-}
-
-fieldset {
-  border: none;
-  background-color: rgba(0, 0, 0, 0.9);
-  margin: 50px auto;
-  padding: 10px 20px;
-  width: 70%;
 }
 
 footer {
@@ -127,12 +127,12 @@ footer p a:hover {
 }
 
 form {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.8);
   display: grid;
   grid-template-columns: 50% 50%;
-  max-width: 800px;
   margin: 0 auto;
   padding: 10px;
+  width: 70%;
 }
 
 #gallery {
@@ -141,7 +141,7 @@ form {
 
 .gallery-container {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -272,13 +272,18 @@ li{
   width: 250px;
 }
 
-ol{
+ol, ul{
   counter-reset: li; /* Initiate a counter */
   list-style-type: none;
 }
 
+ul li::before{
+  content: '\2022 ';
+  color: #FF0000;
+}
+
 ol li::before{
-  color: red;
+  color: #FF0000;
   content: counter(li)'. '; /* Use the counter as content */
   counter-increment: li; /* Increment the counter by 1 */
 }
@@ -305,7 +310,7 @@ ol li::before{
 
 .services {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -339,9 +344,9 @@ ol li::before{
 
 #signature {
   font-style: italic;
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   color: #FF8C00;
-  text-shadow: 2px 2px 5px #000;
+  /* text-shadow: 2px 2px 5px #000; */
 }
 
 table {
@@ -357,7 +362,7 @@ td {
 }
 
 .text {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.8);
   color: rgba(0, 153, 255, 1);
   margin: 20px auto;
   padding: 15px 20px;
@@ -391,13 +396,8 @@ tr:nth-of-type(odd) {
   font-size: 23px;
 }
 
-ul {
-  font-size: 20px;
-  color: #FF8C00;
-}
-
 @media (max-width:1350px) {
-  fieldset {
+  .container {
     width: 80%;
   }
 
@@ -446,7 +446,7 @@ ul {
     margin: 10px 0 0 0;
   }
 
-  .estimatesBanner h1, .estimatesBanner h3 {
+  .estimates-banner h1, .estimates-banner h3 {
     font-size: 18px;
   }
 
@@ -456,7 +456,7 @@ ul {
 
   form {
     grid-template-columns: auto;
-    max-width: 70%;
+    width: 85%;
   }
 
   .gallery-container {
@@ -526,26 +526,22 @@ ul {
   tr:nth-of-type(odd) {
     font-size: 20px;
   }
-
-  ul {
-    font-size: 18px;
-    color: #FF8C00;
-  }
 }
 
 @media (max-width: 700px) {
 
-  .estimatesBanner{
-    width: 100%;
+  .container {
+    margin: 20px auto 20px auto;
+    width: 95%;
   }
 
-  fieldset {
-    margin: 20px 0 20px 0;
-    width: 100%;
+  .estimates-banner{
+    box-shadow: none;
+    width: 95%;
   }
 
   form {
-    max-width: 90%;
+    width: 95%;
   }
 
   .gallery-container {
@@ -603,6 +599,10 @@ ul {
     width: auto;
   }
 
+  ol, ul{
+    padding-left: 5px;
+  }
+
   .services {
     width: 95%;
   }
@@ -613,8 +613,17 @@ ul {
 }
 
 @media(max-width: 400px) {
-  fieldset {
+
+  .container {
+    margin: 20px 0 0 0;
     padding: 10px 5px;
+    width: 100%;
+  }
+
+  .estimates-banner{
+    border-top: none;
+    margin: 0;
+    width: 100%;
   }
 
   form {
