@@ -8,6 +8,45 @@
   background-color: #993399;
 }
 
+.about-photo-container{
+  background-color: #000;
+  border: solid 1px #fff;
+  border-radius: 50%;
+  height: 100%;
+  margin: 20px auto 0 auto;
+  padding: 10px;
+  position: relative;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo-container img{
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  width: 250px;
+}
+
+.about-photo-signature{
+  font-size: 22px;
+}
+
+.about-photo-title{
+  font-size: 20px;
+  color: #f44336;
+}
+
+.about-signature-container{
+  background-color: #000;
+  border: solid 1px #fff;
+  border-radius: 10px;
+  bottom: -15px;
+  box-shadow: 0 0 10px #000;
+  right: 5px;
+  padding: 0 10px;
+  position: absolute;
+}
+
 body {
   background-attachment: fixed;
   background-image: url('images/background.jpg');
@@ -20,13 +59,6 @@ body {
   padding: 0;
   overflow-x: hidden;
   height: 100%;
-}
-
-html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
 }
 
 #contact {
@@ -107,7 +139,6 @@ html {
 }
 
 .estimates-banner {
-  /* background-color: rgba(0, 0, 0, 0.8); */
   border-top: solid 1px #fff;
   margin: 10px auto;
   padding: 5px;
@@ -117,7 +148,7 @@ html {
 
 .estimates-banner h1 {
   text-align: center;
-  color: rgba(255, 102, 204, 1);
+  color: #f44336;
   font-size: 25px;
   text-shadow: -1px 0 0 #000,
     0 -1px 0 #000,
@@ -134,7 +165,7 @@ html {
 
 .estimates-banner h3 {
   text-align: center;
-  color: rgba(255, 102, 204, 1);
+  color: #f44336;
   text-shadow: -1px 0 0 #000,
     0 -1px 0 #000,
     1px 0 0 #000,
@@ -190,6 +221,7 @@ footer p a:hover {
 }
 
 .gallery-container div {
+  border-top: solid 1px #f44336;
   margin: 5px;
   width: 375px;
 }
@@ -257,6 +289,13 @@ header h5 {
   background-color: #4CAF50;
 }
 
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
 #italic {
   font-style: italic;
   color: #FF8C00
@@ -276,7 +315,7 @@ li {
 .main p {
   font-size: 22px;
   color: #fff;
-  margin-bottom: 0;
+  margin: 25px auto 0 auto;
   text-align: center;
 }
 
@@ -323,11 +362,11 @@ ol, ul {
 
 ul li::before {
   content: '\2022 ';
-  color: #FF0000;
+  color: #f44336;
 }
 
 ol li::before {
-  color: #FF0000;
+  color: #f44336;
   content: counter(li)'. ';
   /* Use the counter as content */
   counter-increment: li;
@@ -339,7 +378,7 @@ ol li::before {
 }
 
 #red {
-  color: #FF0000;
+  color: #f44336;
 }
 
 #services {
@@ -383,6 +422,7 @@ ol li::before {
 #signature {
   font-style: italic;
   color: #FF8C00;
+  text-shadow: 0 2px 2px #000;
 }
 
 table {
@@ -426,6 +466,22 @@ tr:nth-of-type(odd) {
 }
 
 @media (max-width:1350px) {
+  .about-photo-container{
+    width: 350px;
+  }
+
+  .about-photo-container img{
+    width: 200px;
+  }
+
+  .about-photo-signature {
+    font-size: 20px;
+  }
+
+  .about-photo-title {
+    font-size: 18px;
+  }
+
   .container, .contact-input-box {
     width: 80%;
   }
@@ -483,6 +539,24 @@ tr:nth-of-type(odd) {
 }
 
 @media (max-width: 1000px) {
+  .about-photo-container{
+    margin: 10px auto 0 auto;
+    padding: 10px;
+    width: 300px;
+  }
+
+  .about-photo-container img{
+    width: 150px;
+  }
+
+  .about-photo-signature{
+    font-size: 18px;
+  }
+
+  .about-photo-title {
+    font-size: 16px;
+  }
+
   .estimates-banner h1, .estimates-banner h3 {
     font-size: 18px;
   }
@@ -569,6 +643,23 @@ tr:nth-of-type(odd) {
 }
 
 @media (max-width: 700px) {
+  .about-photo-container{
+    padding: 5px;
+    width: 250px;
+  }
+
+  .about-photo-container img{
+    width: 150px;
+  }
+
+  .about-photo-signature {
+    font-size: 16px;
+  }
+
+  .about-photo-title {
+    font-size: 14px;
+  }
+
   .container {
     margin: 20px auto 20px auto;
     width: 95%;
@@ -615,6 +706,7 @@ tr:nth-of-type(odd) {
   }
 
   .main p {
+    margin: 10px auto 0 auto;
     width: 95%;
   }
 
