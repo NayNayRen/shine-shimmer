@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Georama&family=Lato&display=swap');
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -8,57 +9,67 @@
   background-color: #993399;
 }
 
-.about-photo-container{
+.about-photo-container {
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
   background-color: #000;
-  border: solid 1px #fff;
   border-radius: 50%;
+  border: solid 1px #fff;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
   height: 100%;
+  justify-content: center;
   margin: 20px auto 0 auto;
   padding: 10px;
   position: relative;
   width: 400px;
-  display: flex;
-  justify-content: center;
 }
 
-.about-photo-container img{
+.about-photo-container img {
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   width: 250px;
 }
 
-.about-photo-signature{
+.about-photo-signature {
   font-size: 22px;
 }
 
-.about-photo-title{
-  font-size: 20px;
+.about-photo-title {
   color: #f44336;
+  font-size: 20px;
 }
 
-.about-signature-container{
+.about-signature-container {
+  -webkit-box-shadow: 0 0 10px #000;
   background-color: #000;
-  border: solid 1px #fff;
   border-radius: 10px;
+  border: solid 1px #fff;
   bottom: -15px;
   box-shadow: 0 0 10px #000;
-  right: 5px;
   padding: 0 10px;
   position: absolute;
+  right: 5px;
 }
 
 body {
+  -ms-flex-direction: column;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
   background-attachment: fixed;
   background-image: url('images/background.jpg');
   background-position: center;
   background-size: cover;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   flex-direction: column;
   font-family: 'Lato', sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
   height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
 }
 
 #contact {
@@ -66,6 +77,8 @@ body {
 }
 
 .contact-button {
+  -o-transition: all 150ms ease;
+  -webkit-transition: all 150ms ease;
   background-color: #fff;
   border: none;
   color: #000;
@@ -80,14 +93,16 @@ body {
 }
 
 .contact-input {
+  -o-transition: all 150ms ease;
+  -webkit-transition: all 150ms ease;
   background-color: #fff;
   border: solid 2px #fff;
   color: #000;
   margin: 0 10px 10px 0;
   outline: none;
   padding: 10px 5px;
-  width: 100%;
   transition: all 150ms ease;
+  width: 100%;
 }
 
 .contact-input:focus, .contact-textarea:focus {
@@ -96,6 +111,7 @@ body {
 
 .contact-input-box {
   background-color: rgba(0, 0, 0, 0.8);
+  display: -ms-grid;
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 0 auto;
@@ -103,32 +119,45 @@ body {
   width: 70%;
 }
 
-.contact-input-box div:nth-child(2){
+.contact-input-box div:nth-child(2) {
+  -ms-flex-align: center;
+  -ms-flex-direction: column;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
   align-items: center;
-  justify-content: center;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-.contact-input-box div:nth-child(2) a{
+.contact-input-box div:nth-child(2) a {
+  -o-transition: color 150ms ease;
+  -webkit-transition: color 150ms ease;
   color: #FF8C00;
   transition: color 150ms ease;
 }
 
-.contact-input-box div:nth-child(2) a:hover{
+.contact-input-box div:nth-child(2) a:hover {
   color: #fff;
   text-decoration: underline;
 }
 
 .contact-textarea {
+  -o-transition: all 150ms ease;
+  -webkit-transition: all 150ms ease;
   background-color: #fff;
   border: solid 2px #fff;
   color: #000;
   height: 200px;
   outline: none;
   padding: 10px 5px;
-  width: 100%;
   transition: all 150ms ease;
+  width: 100%;
 }
 
 .container {
@@ -147,9 +176,11 @@ body {
 }
 
 .estimates-banner h1 {
-  text-align: center;
+  -o-transition: color 150ms ease;
+  -webkit-transition: color 150ms ease;
   color: #f44336;
   font-size: 25px;
+  text-align: center;
   text-shadow: -1px 0 0 #000,
     0 -1px 0 #000,
     1px 0 0 #000,
@@ -164,18 +195,22 @@ body {
 }
 
 .estimates-banner h3 {
-  text-align: center;
+  -o-transition: color 150ms ease;
+  -webkit-transition: color 150ms ease;
   color: #f44336;
+  font-size: 20px;
+  text-align: center;
   text-shadow: -1px 0 0 #000,
     0 -1px 0 #000,
     1px 0 0 #000,
     0 1px 0 #000,
     0 2px 2px #000;
-  font-size: 20px;
   transition: color 150ms ease;
 }
 
 footer {
+  background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1)));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
   color: #fff;
   font-size: 15px;
@@ -186,6 +221,8 @@ footer {
 }
 
 footer p a {
+  -o-transition: color 150ms ease;
+  -webkit-transition: color 150ms ease;
   color: #FF8C00;
   transition: color 150ms ease;
 }
@@ -202,13 +239,23 @@ footer p a:hover {
   bottom: 5px;
   color: #FF8C00;
   font-size: 16px;
-  position: absolute;
   left: 5px;
+  position: absolute;
 }
 
 .gallery-container {
+  -ms-flex-align: center;
+  -ms-flex-direction: row;
+  -ms-flex-pack: center;
+  -ms-flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -231,13 +278,15 @@ footer p a:hover {
 }
 
 header {
+  background: -o-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  text-align: center;
-  text-shadow: 0 2px 2px #000;
-  margin-bottom: 20px;
-  position: relative;
   font-family: 'Georama', sans-serif;
   height: auto;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 2px 2px #000;
 }
 
 header h1 {
@@ -253,9 +302,9 @@ header h1 {
 
 header h2 {
   color: #fff;
-  text-align: center;
   font-size: 35px;
   margin-bottom: 0;
+  text-align: center;
   text-shadow: -1px 0 0 #000,
     0 -1px 0 #000,
     1px 0 0 #000,
@@ -264,9 +313,9 @@ header h2 {
 }
 
 header h5 {
+  color: #FF8C00;
   font-size: 30px;
   font-style: italic;
-  color: #FF8C00;
   margin-bottom: 0;
   text-shadow: -1px 0 0 #000,
     0 -1px 0 #000,
@@ -276,17 +325,20 @@ header h5 {
 }
 
 .header-photo {
+  -ms-transform: translateY(-50%);
+  -webkit-box-shadow: 0 0 10px #000;
+  -webkit-transform: translateY(-50%);
   box-shadow: 0 0 10px #000;
-  width: 300px;
-  position: absolute;
   left: 10px;
-  transform: translateY(-50%);
+  position: absolute;
   top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
 }
 
 #home {
-  top: 80px;
   background-color: #4CAF50;
+  top: 80px;
 }
 
 html {
@@ -297,8 +349,8 @@ html {
 }
 
 #italic {
+  color: #FF8C00;
   font-style: italic;
-  color: #FF8C00
 }
 
 li {
@@ -313,8 +365,8 @@ li {
 }
 
 .main p {
-  font-size: 22px;
   color: #fff;
+  font-size: 22px;
   margin: 25px auto 0 auto;
   text-align: center;
 }
@@ -324,29 +376,41 @@ li {
 }
 
 .nav {
+  -ms-flex-direction: column;
+  -ms-flex-pack: center;
+  -ms-transform: translateY(-50%);
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-transform: translateY(-50%);
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   font-family: 'Georama', sans-serif;
+  justify-content: center;
+  left: -125px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -125px;
   z-index: 1;
 }
 
 .nav a {
+  -o-transition: all 250ms ease;
+  -webkit-box-shadow: 0 0 10px #000;
+  -webkit-transition: all 250ms ease;
+  border-radius: 0 5px 5px 0;
   box-shadow: 0 0 10px #000;
   color: #fff;
-  transition: all 250ms ease;
-  padding: 5px 15px 5px 0;
+  font-size: 30px;
   margin: 15px 0 0 0;
-  width: 175px;
+  padding: 5px 15px 5px 0;
   text-align: left;
   text-decoration: none;
   text-shadow: 0 2px 2px #000;
-  font-size: 30px;
-  border-radius: 0 5px 5px 0;
+  transition: all 250ms ease;
+  width: 175px;
 }
 
 .nav a:hover {
@@ -355,22 +419,22 @@ li {
 }
 
 ol, ul {
+  /* Initiate a counter with counter-reset */
   counter-reset: li;
-  /* Initiate a counter */
   list-style-type: none;
 }
 
 ul li::before {
-  content: '\2022 ';
   color: #f44336;
+  content: '\2022 ';
 }
 
 ol li::before {
+  /* Increment the counter by 1 for each li element */
+  /* Use the counter as content */
   color: #f44336;
   content: counter(li)'. ';
-  /* Use the counter as content */
   counter-increment: li;
-  /* Increment the counter by 1 */
 }
 
 .poolTipLinks {
@@ -386,8 +450,17 @@ ol li::before {
 }
 
 .services {
+  -ms-flex-align: center;
+  -ms-flex-direction: row;
+  -ms-flex-pack: distribute;
+  -ms-flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -420,8 +493,8 @@ ol li::before {
 }
 
 #signature {
-  font-style: italic;
   color: #FF8C00;
+  font-style: italic;
   text-shadow: 0 2px 2px #000;
 }
 
@@ -466,11 +539,11 @@ tr:nth-of-type(odd) {
 }
 
 @media (max-width:1350px) {
-  .about-photo-container{
+  .about-photo-container {
     width: 350px;
   }
 
-  .about-photo-container img{
+  .about-photo-container img {
     width: 200px;
   }
 
@@ -522,6 +595,8 @@ tr:nth-of-type(odd) {
   }
 
   .services div:nth-child(2) {
+    -ms-flex-order: 3;
+    -webkit-box-ordinal-group: 4;
     order: 3;
   }
 
@@ -539,17 +614,17 @@ tr:nth-of-type(odd) {
 }
 
 @media (max-width: 1000px) {
-  .about-photo-container{
+  .about-photo-container {
     margin: 10px auto 0 auto;
     padding: 10px;
     width: 300px;
   }
 
-  .about-photo-container img{
+  .about-photo-container img {
     width: 150px;
   }
 
-  .about-photo-signature{
+  .about-photo-signature {
     font-size: 18px;
   }
 
@@ -643,12 +718,12 @@ tr:nth-of-type(odd) {
 }
 
 @media (max-width: 700px) {
-  .about-photo-container{
+  .about-photo-container {
     padding: 5px;
     width: 250px;
   }
 
-  .about-photo-container img{
+  .about-photo-container img {
     width: 150px;
   }
 
@@ -670,11 +745,14 @@ tr:nth-of-type(odd) {
   }
 
   .estimates-banner {
+    -webkit-box-shadow: none;
     box-shadow: none;
     width: 95%;
   }
 
   .gallery-caption {
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     font-size: 14px;
     left: 50%;
     transform: translateX(-50%);
@@ -711,23 +789,24 @@ tr:nth-of-type(odd) {
   }
 
   .nav {
-    position: relative;
     flex-direction: row;
-    justify-content: center;
-    top: 0;
     flex-wrap: wrap;
-    transform: translateX(-50%);
+    justify-content: center;
     left: 50%;
+    position: relative;
+    top: 0;
+    transform: translateX(-50%);
     width: 100%;
   }
 
   .nav a {
-    font-size: 20px;
+    -webkit-box-shadow: 0 5px 10px #000;
     border-radius: 5px;
-    text-align: center;
     box-shadow: 0 5px 10px #000;
-    padding: 2px 12px;
+    font-size: 20px;
     margin: 10px 5px 0 5px;
+    padding: 2px 12px;
+    text-align: center;
     width: auto;
   }
 
