@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Georama&family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Georama&family=Lato&display=swap");
 
 * {
   -webkit-box-sizing: border-box;
@@ -58,22 +58,22 @@ body {
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
   background-attachment: fixed;
-  background-image: url('images/background.jpg');
+  background-image: url("images/background.jpg");
   background-position: center;
   background-size: cover;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
   flex-direction: column;
-  font-family: 'Lato', sans-serif;
-  height: 100%;
+  font-family: "Lato", sans-serif;
+  height: 100vh;
   margin: 0;
   overflow-x: hidden;
   padding: 0;
 }
 
 #contact {
-  background-color: #FF8C00;
+  background-color: #ff8c00;
 }
 
 .contact-button {
@@ -88,7 +88,7 @@ body {
 }
 
 .contact-button:hover {
-  color: #FF8C00;
+  color: #ff8c00;
   cursor: pointer;
 }
 
@@ -105,8 +105,9 @@ body {
   width: 100%;
 }
 
-.contact-input:focus, .contact-textarea:focus {
-  border-color: #FF8C00;
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: #ff8c00;
 }
 
 .contact-input-box {
@@ -138,7 +139,7 @@ body {
 .contact-input-box div:nth-child(2) a {
   -o-transition: color 150ms ease;
   -webkit-transition: color 150ms ease;
-  color: #FF8C00;
+  color: #ff8c00;
   transition: color 150ms ease;
 }
 
@@ -181,15 +182,13 @@ body {
   color: #f44336;
   font-size: 25px;
   text-align: center;
-  text-shadow: -1px 0 0 #000,
-    0 -1px 0 #000,
-    1px 0 0 #000,
-    0 1px 0 #000,
+  text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000,
     0 2px 2px #000;
   transition: color 150ms ease;
 }
 
-.estimates-banner h1:hover, .estimates-banner h3:hover {
+.estimates-banner h1:hover,
+.estimates-banner h3:hover {
   color: #fff;
   cursor: pointer;
 }
@@ -200,17 +199,20 @@ body {
   color: #f44336;
   font-size: 20px;
   text-align: center;
-  text-shadow: -1px 0 0 #000,
-    0 -1px 0 #000,
-    1px 0 0 #000,
-    0 1px 0 #000,
+  text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000,
     0 2px 2px #000;
   transition: color 150ms ease;
 }
 
 footer {
   background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1)));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0)),
+    to(rgba(0, 0, 0, 1))
+  );
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
   color: #fff;
   font-size: 15px;
@@ -223,7 +225,7 @@ footer {
 footer p a {
   -o-transition: color 150ms ease;
   -webkit-transition: color 150ms ease;
-  color: #FF8C00;
+  color: #ff8c00;
   transition: color 150ms ease;
 }
 
@@ -237,7 +239,7 @@ footer p a:hover {
 
 .gallery-caption {
   bottom: 5px;
-  color: #FF8C00;
+  color: #ff8c00;
   font-size: 16px;
   left: 5px;
   position: absolute;
@@ -279,9 +281,15 @@ footer p a:hover {
 
 header {
   background: -o-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  font-family: 'Georama', sans-serif;
+  font-family: "Georama", sans-serif;
   height: auto;
   margin-bottom: 20px;
   position: relative;
@@ -293,10 +301,7 @@ header h1 {
   color: #fff;
   font-size: 40px;
   margin-bottom: 0;
-  text-shadow: -1px 0 0 #000,
-    0 -1px 0 #000,
-    1px 0 0 #000,
-    0 1px 0 #000,
+  text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000,
     0 2px 2px #000;
 }
 
@@ -305,22 +310,16 @@ header h2 {
   font-size: 35px;
   margin-bottom: 0;
   text-align: center;
-  text-shadow: -1px 0 0 #000,
-    0 -1px 0 #000,
-    1px 0 0 #000,
-    0 1px 0 #000,
+  text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000,
     0 2px 2px #000;
 }
 
 header h5 {
-  color: #FF8C00;
+  color: #ff8c00;
   font-size: 30px;
   font-style: italic;
   margin-bottom: 0;
-  text-shadow: -1px 0 0 #000,
-    0 -1px 0 #000,
-    1px 0 0 #000,
-    0 1px 0 #000,
+  text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000,
     0 2px 2px #000;
 }
 
@@ -337,7 +336,7 @@ header h5 {
 }
 
 #home {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   top: 80px;
 }
 
@@ -346,10 +345,11 @@ html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 #italic {
-  color: #FF8C00;
+  color: #ff8c00;
   font-style: italic;
 }
 
@@ -360,7 +360,7 @@ li {
 }
 
 .main {
-  height: 100%;
+  min-height: 100%;
   position: relative;
 }
 
@@ -387,7 +387,7 @@ li {
   display: -webkit-box;
   display: flex;
   flex-direction: column;
-  font-family: 'Georama', sans-serif;
+  font-family: "Georama", sans-serif;
   justify-content: center;
   left: -125px;
   position: absolute;
@@ -418,7 +418,8 @@ li {
   width: 250px;
 }
 
-ol, ul {
+ol,
+ul {
   /* Initiate a counter with counter-reset */
   counter-reset: li;
   list-style-type: none;
@@ -426,14 +427,14 @@ ol, ul {
 
 ul li::before {
   color: #f44336;
-  content: '\2022 ';
+  content: "\2022 ";
 }
 
 ol li::before {
   /* Increment the counter by 1 for each li element */
   /* Use the counter as content */
   color: #f44336;
-  content: counter(li)'. ';
+  content: counter(li) ". ";
   counter-increment: li;
 }
 
@@ -480,7 +481,7 @@ ol li::before {
 }
 
 .services h3 {
-  color: #FF8C00;
+  color: #ff8c00;
   padding-left: 5px;
   text-shadow: 0 1px 1px #000;
 }
@@ -493,7 +494,7 @@ ol li::before {
 }
 
 #signature {
-  color: #FF8C00;
+  color: #ff8c00;
   font-style: italic;
   text-shadow: 0 2px 2px #000;
 }
@@ -533,12 +534,12 @@ tr:nth-of-type(even) {
 }
 
 tr:nth-of-type(odd) {
-  background-color: #FF8C00;
+  background-color: #ff8c00;
   color: #000;
   font-size: 22px;
 }
 
-@media (max-width:1350px) {
+@media (max-width: 1350px) {
   .about-photo-container {
     width: 350px;
   }
@@ -555,7 +556,8 @@ tr:nth-of-type(odd) {
     font-size: 18px;
   }
 
-  .container, .contact-input-box {
+  .container,
+  .contact-input-box {
     width: 80%;
   }
 
@@ -632,7 +634,8 @@ tr:nth-of-type(odd) {
     font-size: 16px;
   }
 
-  .estimates-banner h1, .estimates-banner h3 {
+  .estimates-banner h1,
+  .estimates-banner h3 {
     font-size: 18px;
   }
 
@@ -816,7 +819,8 @@ tr:nth-of-type(odd) {
     width: auto;
   }
 
-  ol, ul {
+  ol,
+  ul {
     padding-left: 5px;
   }
 
@@ -837,7 +841,7 @@ tr:nth-of-type(odd) {
   }
 }
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
   .contact-input-box {
     width: 100%;
   }
