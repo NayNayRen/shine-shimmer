@@ -54,17 +54,24 @@
 }
 
 body {
-  -ms-flex-direction: column;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0.85)),
+      to(rgba(0, 0, 0, 0.75))
+    ),
+    url("images/background.jpg");
   background-attachment: fixed;
-  background-image: url("images/background.jpg");
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("images/background.jpg");
   background-position: center;
   background-size: cover;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  flex-direction: column;
+  background-color: #000;
   font-family: "Lato", sans-serif;
   height: 100vh;
   margin: 0;
@@ -166,6 +173,7 @@ body {
   margin: 50px auto;
   padding: 15px 20px;
   width: 70%;
+  /* outline: solid 1px blue; */
 }
 
 .estimates-banner {
@@ -174,34 +182,19 @@ body {
   padding: 5px;
   position: relative;
   width: 500px;
+  /* outline: solid 1px blue; */
 }
 
 .estimates-banner h1 {
-  -o-transition: color 150ms ease;
-  -webkit-transition: color 150ms ease;
   color: #f44336;
   font-size: 25px;
   text-align: center;
-  text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000,
-    0 2px 2px #000;
-  transition: color 150ms ease;
-}
-
-.estimates-banner h1:hover,
-.estimates-banner h3:hover {
-  color: #fff;
-  cursor: pointer;
 }
 
 .estimates-banner h3 {
-  -o-transition: color 150ms ease;
-  -webkit-transition: color 150ms ease;
   color: #f44336;
   font-size: 20px;
   text-align: center;
-  text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000,
-    0 2px 2px #000;
-  transition: color 150ms ease;
 }
 
 footer {
@@ -220,6 +213,7 @@ footer {
   text-align: center;
   text-shadow: 0 2px 2px #000;
   width: 100%;
+  outline: solid 1px blue;
 }
 
 footer p a {
@@ -295,12 +289,13 @@ header {
   position: relative;
   text-align: center;
   text-shadow: 0 2px 2px #000;
+  /* outline: solid 1px blue; */
 }
 
 header h1 {
   color: #fff;
   font-size: 40px;
-  margin-bottom: 0;
+  margin: 0;
   text-shadow: -1px 0 0 #000, 0 -1px 0 #000, 1px 0 0 #000, 0 1px 0 #000,
     0 2px 2px #000;
 }
@@ -359,9 +354,10 @@ li {
   margin-bottom: 15px;
 }
 
-.main {
+main {
   min-height: 100%;
   position: relative;
+  outline: solid 1px blue;
 }
 
 .main p {
@@ -378,11 +374,11 @@ li {
 .nav {
   -ms-flex-direction: column;
   -ms-flex-pack: center;
-  -ms-transform: translateY(-50%);
+  /* -ms-transform: translateY(-50%); */
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
   -webkit-box-pack: center;
-  -webkit-transform: translateY(-50%);
+  /* -webkit-transform: translateY(-50%); */
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -391,8 +387,9 @@ li {
   justify-content: center;
   left: -125px;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  /* top: 50%;
+  transform: translateY(-50%); */
   z-index: 1;
 }
 
@@ -539,7 +536,7 @@ tr:nth-of-type(odd) {
   font-size: 22px;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1300px) {
   .about-photo-container {
     width: 350px;
   }
@@ -584,9 +581,9 @@ tr:nth-of-type(odd) {
     font-size: 20px;
   }
 
-  .nav {
+  /* .nav {
     top: 45%;
-  }
+  } */
 
   .nav a {
     font-size: 25px;
@@ -634,6 +631,11 @@ tr:nth-of-type(odd) {
     font-size: 16px;
   }
 
+  .contact-input-box {
+    grid-template-columns: auto;
+    width: 85%;
+  }
+
   .estimates-banner h1,
   .estimates-banner h3 {
     font-size: 18px;
@@ -641,11 +643,6 @@ tr:nth-of-type(odd) {
 
   .floatRight img {
     width: 50px;
-  }
-
-  .contact-input-box {
-    grid-template-columns: auto;
-    width: 85%;
   }
 
   .gallery-container {
@@ -675,9 +672,9 @@ tr:nth-of-type(odd) {
     width: 85%;
   }
 
-  .nav {
+  /* .nav {
     top: 40%;
-  }
+  } */
 
   .nav a {
     font-size: 22px;
