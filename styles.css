@@ -210,10 +210,18 @@ footer {
   color: #fff;
   font-size: 16px;
   padding: 10px 0;
+  position: relative;
   text-align: center;
   text-shadow: 0 2px 2px #000;
   width: 100%;
   /* outline: solid 1px blue; */
+}
+
+.footer-logo {
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+  width: 50px;
 }
 
 footer p a {
