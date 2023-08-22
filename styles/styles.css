@@ -1,10 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Georama&family=Lato&display=swap");
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 #about {
   background-color: #993399;
 }
@@ -54,29 +47,21 @@
 }
 
 body {
-  background-image: -webkit-gradient(
-      linear,
+  background-image: -webkit-gradient(linear,
       left top,
       right top,
       from(rgba(0, 0, 0, 0.85)),
-      to(rgba(0, 0, 0, 0.75))
-    ),
-    url("images/background.jpg");
+      to(rgba(0, 0, 0, 0.75))),
+    url("../images/background.jpg");
   background-attachment: fixed;
-  background-image: linear-gradient(
-      90deg,
+  background-image: linear-gradient(90deg,
       rgba(0, 0, 0, 0.85),
-      rgba(0, 0, 0, 0.75)
-    ),
-    url("images/background.jpg");
+      rgba(0, 0, 0, 0.75)),
+    url("../images/background.jpg");
   background-position: center;
   background-size: cover;
   background-color: #000;
   font-family: "Lato", sans-serif;
-  height: 100vh;
-  margin: 0;
-  overflow-x: hidden;
-  padding: 0;
 }
 
 #contact {
@@ -199,13 +184,11 @@ body {
 
 footer {
   background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 0)),
-    to(rgba(0, 0, 0, 1))
-  );
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 1)));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
   color: #fff;
   font-size: 16px;
@@ -283,13 +266,11 @@ footer p a:hover {
 
 header {
   background: -o-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 1)),
-    to(rgba(0, 0, 0, 0))
-  );
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 1)),
+      to(rgba(0, 0, 0, 0)));
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   font-family: "Georama", sans-serif;
   height: auto;
@@ -344,14 +325,6 @@ header h5 {
   top: 80px;
 }
 
-html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  width: 100%;
-}
-
 #italic {
   color: #ff8c00;
   font-style: italic;
@@ -364,9 +337,21 @@ li {
 }
 
 main {
-  /* min-height: 300px; */
+  -ms-flex-align: center;
+  -ms-flex-direction: column;
+  -ms-flex-pack: space-evenly;
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: space-evenly;
+  align-items: center;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 100%;
   position: relative;
-  /* outline: solid 1px blue; */
 }
 
 .main p {
@@ -524,10 +509,6 @@ td {
   padding: 15px 20px;
   width: 70%;
 }
-
-/* .textSize {
-  font-size: 1.25em;
-} */
 
 #tips {
   background-color: #555;
@@ -741,10 +722,6 @@ tr:nth-of-type(odd) {
     bottom: -10px;
   }
 
-  /* .about-photo-title {
-    font-size: 14px;
-  } */
-
   .container {
     margin: 20px auto 20px auto;
     width: 95%;
@@ -843,10 +820,6 @@ tr:nth-of-type(odd) {
     width: 95%;
   }
 
-  /* tr:nth-of-type(even) {
-    font-size: 14px;
-  } */
-
   tr:nth-of-type(odd) {
     font-size: 16px;
   }
@@ -888,7 +861,7 @@ tr:nth-of-type(odd) {
   }
 
   header h5 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   li {
@@ -896,7 +869,7 @@ tr:nth-of-type(odd) {
   }
 
   .main p {
-    font-size: 16px;
+    font-size: 18px;
     width: 100%;
   }
 
